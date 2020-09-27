@@ -16,8 +16,26 @@
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
     <script src="https://cdn.jsdelivr.net/npm/echarts-leaflet@1.1.0/dist/echarts-leaflet.js"></script>
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
+     <div id="header">
+            <div class="form-group">
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Search...">
+            </div>
+            <div class="filter">
+                <button type="button" class="btn btn-primary">City</button>
+                <button type="button" class="btn btn-primary">Baranggay</button>
+                <button type="button" class="btn btn-primary">Purok</button>
+            </div>
+            
+            
+        </div>
     <div id="main" style="width: 1200px; height: 600px;"></div>
     <script>
         var dom = document.getElementById('main');
@@ -126,5 +144,19 @@
         });
 
     </script>
+    <style>
+            #exampleFormControlInput1{
+        margin: 20px 5px 15px 75px;
+        width: 30%;
+    }
+
+    #main, .filter{
+        margin-left: 75px;
+    }
+
+    .filter{
+        margin-bottom: 15px;
+    }
+        </style>
 </body>
 </html> 
