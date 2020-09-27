@@ -1,0 +1,17 @@
+{
+  "name": "echart-leaflet-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "echarts": "^4.9.0",
+    "echarts-leaflet": "^1.1.0",
+    "jquery": "^3.5.1",
+    "leaflet": "^1.7.1"
+  }
+}
