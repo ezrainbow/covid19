@@ -41,7 +41,7 @@
         var dom = document.getElementById('main');
         var chart = echarts.init(dom);
         // https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv
-        $.get('./confirmed.csv', function (data) {
+        $.get('https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv', function (data) {
             var lines = data.split('\n');
             var result = [];
             for (var i = 1; i < lines.length; ++i) {
@@ -133,8 +133,9 @@
                     dimension: 2
                 },
                 leaflet: {
-                    zoom:9,
-                    center: [125.5, 8.8],
+                    //zoom:9,
+                    //center: [125.5, 8.8],
+                    center: [0,40],
                     roam: true,
                     tiles: [{
                         urlTemplate: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png'
