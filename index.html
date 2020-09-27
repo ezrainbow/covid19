@@ -36,7 +36,7 @@
             
             
         </div>
-    <div id="main" style="width: 1200px; height: 550px;"></div>
+     <div class="maps" id="main" style="width: 90%; height: 450px;"></div>
     <script>
         var dom = document.getElementById('main');
         var chart = echarts.init(dom);
@@ -156,6 +156,19 @@
 
     .filter{
         margin-bottom: 15px;
+    }
+        @media only screen and (max-width: 980px){
+        
+        #exampleFormControlInput1{
+        margin: 5px 5px 5px 5px;
+        width: 80%;
+        }
+        #main, .filter{
+        margin-left: 5px;
+    }
+
+    .filter{
+        margin-bottom: 5px;
     }
         </style>
 </body>
