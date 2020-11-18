@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+       <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>CARAGA</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="leaflet/leaflet.css">
+        <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+        <script type="text/javascript" src="leaflet/leaflet.js"></script>
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+    </head>
+    <script type="text/javascript">
+        $(window).load(function() {
+        // Animate loader off screen
+        $(".se-pre-con").fadeOut("slow");;
+    });
+    </script>
+
+    <body onload="loaded()">
+       <div id="se-pre-con" class="se-pre-con"></div>
+         <header>
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                
+                <div class="mx-auto order-0">
+                    <a class="navbar-brand mx-auto" id="logo" href="#">COVID-19 CARAGA REGION</a>
+                </div>
+                <div class="navbar-collapse collapse w-1000 order-3 dual-collapse2">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">VIEW DATA</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">TESTING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+         </header>   
+        <div class="banner">
+            <h2> Caraga Region COVID-19 Mapping Dashboard</h2>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <div id="seachWrapper">
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="type municipality" id="textInput"></input>
+                            
+                            <select class="form-control" id="typeOfQuery" onchange="mytypeOfQuery()">
+                            <option value="active_cases">Active cases</option>
+                            <option value="recoveries">Recoveries</option>
+                            <option value="deaths">Deaths</option>
+                            </select>
+                            
+                            <select class="form-control" id="greaterLess">
+                            <option value="<">Less than</option>
+                            <option value="=">Equal</option>
+                            <option value=">">Greater than</option>
+                            </select>
+    
+                            <input class="form-control" type="number" placeholder="input number" id="numberInput"></input>
+                            <button type="button" class="btn btn-primary" id="btnGo">Go</button>
+                            <button type="button" class="btn btn-danger" id="btnClear">Clear</button>
+                        </div>
+                </div>
+                
+                    <div class="cols-sm-3">
+                        <h5 style="background-color:#e67e22">ACTIVE CASES: <p id="active_value">0</p></h5>
+                    </div>
+                    <div class="cols-sm-3">
+                        <h5 style="background-color:#3498db">RECOVERIES: <p id="rec_value">0</p></h5>
+                    </div>
+                    <div class="cols-sm-3">
+                        <h5 style="background-color:#e74c3c">DEATHS: <p id="deaths_value">0</p></h5>
+                    </div>
+                
+                
+            </div>
+            <div class="col-sm-8">
+                <div class="row">
+                    <div class="text-center" id="maploader">
+                        <div class="loading">
+                        </div>
+                        <span>Loading...</span>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+        
+        
+            
+    </body>
+    <script type="text/javascript" src="my.js"></script>
+
+</html>

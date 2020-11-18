@@ -1,0 +1,169 @@
+html, body {
+    
+    height: 100%;
+    overflow: hidden;
+  }
+
+body{
+    margin: 0;
+    padding: 0;
+    background: #34495e !important;
+    justify-content: center;
+    font-family: "montserrat",sans-serif;
+    }
+.navbar{
+    background-color: #092C74 !important;
+    height: 90px;
+}
+.nav-link{
+    margin-right: 30px;
+}
+
+.banner{
+    margin-top: 0px;
+    height: 70px;
+    text-align: center;
+    background-color: #222222;
+}
+h2{
+    padding-top: 15px;
+    color: white;
+}
+
+#seachWrapper{
+    
+    padding-left: 90px;
+}
+
+#seachWrapper .form-control {
+    margin-top: 10px;
+    width: 100%;
+}
+
+#seachWrapper button{
+    margin-top: 10px;
+}
+
+.btn-primary{
+    height: 50px;
+    width: 250px;
+}
+.btn-danger{
+    height: 50px;
+    width: 82px;
+}
+
+.btn-primary .btn-danger{
+    padding-top: 5px;
+}
+
+#map{
+    margin-top: 10px;
+    width: 95%;
+    height: 96%;
+}
+
+h5{ 
+    padding-top: 10px;
+    margin-left: 90px;
+    text-align: center;
+    color: white;
+    display: inline-block;
+    width: 340px;
+  }
+
+ #logo{
+      font-size: 40px;
+      font-weight: bold;
+  }
+
+  .loading{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 10px solid #e74c3c;
+    position: relative;
+    animation: a1 2s linear infinite;
+    }
+
+    .loading::before,.loading::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    }
+
+    .loading::before{
+    border-top: 10px solid #e67e22;
+    transform: rotate(120deg);
+    }
+
+    .loading::after{
+    border-top: 10px solid #3498db;
+    transform: rotate(240deg);
+    }
+
+    #maploader span{
+    
+    
+    font-size: 20px;
+    color: rgb(4, 116, 243);
+    
+    }
+    
+    @keyframes a1 {
+    to{
+        transform: rotate(360deg);
+    }
+    }
+
+    @keyframes a2 {
+    to{
+        transform: rotate(-360deg);
+    }
+    }
+
+    #map{
+        color: black;
+    }
+
+    #maploader{
+		position:absolute;
+		top: 45%;
+        left: 40%;
+        
+		z-index: 99999;
+		display: none;
+        }
+        
+        .no-js #loader { display: none;  }
+        .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(Preloader_3.gif) center no-repeat #fff;
+        }
+
+.municipality{
+    text-align: center;
+    background-color: #3498DB;
+}
+
+table {
+    
+    
+    border-collapse: collapse;
+}
+
+td {
+    border: none;
+}
