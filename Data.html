@@ -26,7 +26,7 @@
 			</div>
 			<div id="home">
 				<ul>
-					<a href="index.php"><li>HOME</li></a>	
+					<a href="index.html"><li>HOME</li></a>	
 					<li>VIEW DATA</li>
 					<li>TESTING</li>
 					<li>ABOUT</li>
@@ -68,25 +68,7 @@
                 </tr>
             </thead>
             <tbody>
-                <?php
-                    $con = pg_connect("host=$host port=$port dbname=$db user=$user password=$pass")
-                    or die ("Could not connect to server\n");
-                    $query = "SELECT mun_name, active_cases, recoveries, deaths FROM caragaregion_municipalities;";   
-                    $result = pg_query($con, $query) or die("Cannot execute query: $query\n"); 
-
-                    //if there is return, values will be saved to the variables
-                    while ($row = pg_fetch_row($result)) {  
-                        echo "<tr class='jsTableRow'>";
-                        echo "<td data-field = 'mun_name' >" .$row [0]. "</td>";
-                        echo "<td data-field = 'active' class = 'center'>" .$row [1]. "</td>";
-                        echo "<td data-field = 'recoveries' class = 'center'>" .$row [2]. "</td>";
-                        echo "<td data-field = 'deaths' class = 'center'>" .$row [3]. "</td>";
-                        echo "</tr>";
-                    } 
-                    //closing the connection
-                    pg_close($con); 
-
-                ?>
+             
                 
                 
             </tbody>
